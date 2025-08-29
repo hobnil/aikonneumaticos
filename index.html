@@ -3,231 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta de Servicio: Google Ads + Instagram para Aikon Neumáticos</title>
+    <title>Propuesta de Servicio Digital - Aikon Neumáticos</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"> 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'aikon-blue': '#1E40AF',
+                        'aikon-dark': '#1F2937',
+                        'aikon-light': '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            --aikon-azul-principal: #0202f6;
-            --aikon-amarillo-botones: #ffd409;
-            --aikon-negro-texto: #000000;
-            --aikon-blanco: #ffffff;
-            --aikon-gris-claro: #f3f4f6; 
+        .gradient-bg {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
         }
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--aikon-negro-texto); 
+        .card-hover {
+            transition: all 0.3s ease;
         }
-        .font-black { font-weight: 900; }
-        .bg-aikon-azul { background-color: var(--aikon-azul-principal); }
-        .text-aikon-azul { color: var(--aikon-azul-principal); }
-        .bg-aikon-amarillo { background-color: var(--aikon-amarillo-botones); }
-        .text-aikon-amarillo { color: var(--aikon-amarillo-botones); }
-        
-        /* Timeline Styles */
-        .timeline-item {
-            position: relative;
-            padding-left: 3rem; /* 48px */
-            padding-bottom: 2.5rem; /* 40px */
-        }
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0.875rem; /* 14px */
-            top: 0.25rem; /* 4px */
-            width: 2px;
-            height: 100%;
-            background-color: #e5e7eb; /* gray-200 */
-        }
-        .timeline-icon {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 2rem; /* 32px */
-            height: 2rem; /* 32px */
-            border-radius: 9999px; /* rounded-full */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--aikon-blanco);
-            border: 3px solid var(--aikon-blanco);
-            box-shadow: 0 0 0 3px var(--aikon-azul-principal);
-        }
-        .btn-cta {
-            background-color: var(--aikon-amarillo-botones);
-            color: var(--aikon-negro-texto);
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            display: inline-block;
-        }
-        .btn-cta:hover {
-            background-color: #e6bf08;
-            transform: translateY(-2px);
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
-<body class="bg-aikon-gris-claro">
-
+<body class="bg-gray-50 font-sans">
     <!-- Header -->
-    <header class="bg-aikon-blanco p-6 shadow-md sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <img src="https://aikonneumaticos.com/wp-content/uploads/2022/11/logo-aikon.svg" alt="Logo Aikon Neumáticos" class="h-12">
-            <div class="text-right">
-                <h1 class="text-lg font-bold text-aikon-azul">Propuesta de Servicio Digital</h1>
-                <p class="text-sm text-gray-600">Google Ads + Instagram</p>
+    <header class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="logo_aikonneumaticos.png" alt="Aikon Neumáticos" class="h-16 w-auto bg-white p-2 rounded-lg">
+                    <div>
+                        <h1 class="text-2xl font-bold">Propuesta de Servicio Digital</h1>
+                        <p class="text-blue-100">Google Ads + Facebook + Instagram</p>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-6 md:p-10">
-        
-        <!-- Introduction -->
-        <section class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-black text-aikon-azul mb-4">Plan de Acción para Atraer Nuevos Clientes</h2>
-            <p class="text-lg text-gray-700 max-w-3xl mx-auto">Hola Aikon Neumáticos, esta es una propuesta clara y directa para poner en marcha una estrategia digital efectiva. A continuación, detallamos el plan de trabajo, las fechas y los próximos pasos.</p>
-        </section>
+    <!-- Hero Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-aikon-dark mb-6">Plan de Acción para Atraer Nuevos Clientes</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Una propuesta clara y directa para poner en marcha una estrategia digital efectiva que genere resultados reales para tu negocio.
+            </p>
+        </div>
+    </section>
 
-        <!-- Timeline Section -->
-        <section class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
-            <div class="max-w-3xl mx-auto">
+    <!-- Fases del Plan -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-aikon-dark mb-12">Nuestro Plan de Trabajo</h3>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Fase 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-aikon-blue text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-4">1</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-aikon-dark">FASE 1: PUESTA EN MARCHA</h4>
+                            <p class="text-sm text-gray-600">(Campaña de Google Ads)</p>
+                        </div>
+                    </div>
+                    
+                    <h5 class="font-semibold text-aikon-dark mb-4">Setup Inicial y Lanzamiento de Campaña</h5>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-aikon-blue rounded-full mt-2 mr-3"></div>
+                            <p class="text-gray-700">Creación de página de aterrizaje para Alcorcón</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-aikon-blue rounded-full mt-2 mr-3"></div>
+                            <p class="text-gray-700">Creación de página de aterrizaje para Fuenlabrada</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-aikon-blue rounded-full mt-2 mr-3"></div>
+                            <p class="text-gray-700">Configuración completa de campaña de Google Ads</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-aikon-blue">287€ + IVA</p>
+                            <p class="text-sm text-gray-600">Inversión Inicial (Setup)</p>
+                            <p class="text-sm font-semibold text-aikon-dark mt-2">📅 Pago: 1 al 5 de Septiembre</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-4">2</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-aikon-dark">FASE 2: CRECIMIENTO SOSTENIDO</h4>
+                            <p class="text-sm text-gray-600">Gestión Digital Continua</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3"></div>
+                            <p class="text-gray-700"><strong>Instagram:</strong> Feeds, reels, carrusel e historias</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3"></div>
+                            <p class="text-gray-700"><strong>Facebook:</strong> Imagen, video (reels e historias)</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3"></div>
+                            <p class="text-gray-700"><strong>Google Ads:</strong> Optimización y seguimiento de campaña</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3"></div>
+                            <p class="text-gray-700"><strong>Meta Ads:</strong> Creación, optimización y seguimiento de campaña</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-4">
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-green-600">289€ + IVA</p>
+                            <p class="text-sm text-gray-600">Inversión Mensual</p>
+                            <p class="text-sm font-semibold text-aikon-dark mt-2">📅 Pago: 1 al 5 de cada mes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Incluidos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-aikon-dark mb-12">¿Qué Incluye el Servicio Mensual?</h3>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Google Ads -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-aikon-dark">Google Ads</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• Optimización y seguimiento de campaña</li>
+                        <li>• Supervisión y ajuste de pujas</li>
+                        <li>• Creación y testeo de nuevos anuncios</li>
+                        <li>• Informe mensual con resultados clave</li>
+                    </ul>
+                </div>
+
+                <!-- Facebook -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-aikon-dark">Facebook</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• Creación, optimización y seguimiento de Meta Ads</li>
+                        <li>• Publicaciones de imagen y video</li>
+                        <li>• Reels e historias</li>
+                        <li>• Textos persuasivos y hashtags</li>
+                        <li>• Gestión de comunidad</li>
+                    </ul>
+                </div>
+
+                <!-- Instagram -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-aikon-dark">Instagram</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>• Creación, optimización y seguimiento de Meta Ads</li>
+                        <li>• Feeds, reels, carrusel e historias</li>
+                        <li>• Textos persuasivos y hashtags</li>
+                        <li>• Gestión de comunidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Próximos Pasos -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-aikon-dark mb-12">Próximos Pasos para Empezar</h3>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Paso 1 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                        <div class="bg-aikon-blue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                        <h4 class="text-xl font-bold text-aikon-dark mb-3">Confirmación</h4>
+                        <p class="text-gray-600">Aceptación de la propuesta y abono del pago del setup inicial.</p>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                        <div class="bg-aikon-blue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                        <h4 class="text-xl font-bold text-aikon-dark mb-3">Accesos y Material</h4>
+                        <p class="text-gray-600">Proporcionar accesos necesarios (Google, Instagram y Facebook) y material gráfico para publicaciones.</p>
+                        <div class="mt-3 p-3 bg-yellow-50 rounded-lg">
+                            <p class="text-sm text-yellow-800 font-semibold">⚠️ Se requieren datos de acceso a redes sociales</p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                        <div class="bg-aikon-blue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                        <h4 class="text-xl font-bold text-aikon-dark mb-3">Validación</h4>
+                        <p class="text-gray-600">Revisión y validación de los primeros anuncios y publicaciones antes del lanzamiento oficial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-6">¿Listos para empezar a atraer nuevos clientes?</h3>
+            <p class="text-xl mb-8 text-blue-100">Si tienes cualquier duda o quieres dar el siguiente paso, no dudes en contactarme:</p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="mailto:hola@hobnilsanchez.com?subject=Consulta%20servicio%20web%20Consulado%20RD&body=Hola%20Hobnil%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20el%20servicio%20web%20para%20el%20Consulado%20Dominicano." 
+                   class="bg-white text-aikon-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    Enviar Email
+                </a>
                 
-                <!-- Timeline Item 1: Setup Inicial -->
-                <div class="timeline-item">
-                    <div class="timeline-icon bg-aikon-azul">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <p class="text-sm font-semibold text-gray-500">FASE 1: PUESTA EN MARCHA</p>
-                    <h3 class="text-2xl font-bold text-aikon-azul my-2">Setup Inicial y Lanzamiento de Campaña</h3>
-                    <p class="text-gray-700 mb-4">
-                        Construimos la base estratégica para el éxito de la campaña.
-                    </p>
-                    <div class="bg-gray-100 p-6 rounded-lg">
-                        <p class="font-bold text-lg">Entregables de esta fase:</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1 my-2 text-sm">
-                            <li>Creación de la página de aterrizaje para Alcorcón.</li>
-                            <li>Creación de la página de aterrizaje para Fuenlabrada.</li>
-                            <li>Configuración completa de la campaña de Google Ads.</li>
-                        </ul>
-                        <hr class="my-3">
-                        <p class="font-bold">Inversión Inicial (Setup): <span class="text-aikon-azul text-2xl">287€ + IVA</span></p>
-                        <p class="text-sm font-semibold">Fecha de pago: <span class="text-gray-700">15 de Agosto</span></p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 2: Primer Mes de Gestión -->
-                <div class="timeline-item">
-                    <div class="timeline-icon bg-aikon-azul">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <p class="text-sm font-semibold text-gray-500">FASE 2: PRIMEROS RESULTADOS</p>
-                    <h3 class="text-2xl font-bold text-aikon-azul my-2">Gestión y Optimización (Primer Mes)</h3>
-                    <p class="text-gray-700 mb-4">
-                        Comenzamos con la gestión mensual. Nos centraremos en optimizar anuncios, gestionar Instagram y analizar los primeros datos para maximizar el rendimiento.
-                    </p>
-                    <div class="bg-yellow-100 border-l-4 border-aikon-amarillo p-6 rounded-r-lg">
-                        <p class="font-bold text-lg">Inversión Gestión Agosto (15 al 31): <span class="text-aikon-azul text-2xl">144,50€ + IVA</span></p>
-                        <p class="text-sm font-semibold">Fecha de pago: <span class="text-gray-700">1 al 5 de Septiembre</span></p>
-                        <p class="text-xs text-gray-600 mt-2"><strong>Aclaración:</strong> Este importe corresponde al 50% de la cuota mensual, ya que el servicio para este primer mes cubre el periodo del 15 al 31 de agosto.</p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 3: Gestión Continua -->
-                <div class="timeline-item">
-                    <div class="timeline-icon bg-aikon-azul">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <p class="text-sm font-semibold text-gray-500">FASE 3: CRECIMIENTO SOSTENIDO</p>
-                    <h3 class="text-2xl font-bold text-aikon-azul my-2">Gestión Digital Continua</h3>
-                    <p class="text-gray-700 mb-4">
-                        A partir de septiembre, entramos en el ciclo de gestión mensual completa, asegurando un flujo constante de clientes potenciales a través de Google Ads e Instagram.
-                    </p>
-                    <div class="bg-gray-100 p-6 rounded-lg">
-                        <p class="font-bold text-lg">Inversión Mensual: <span class="text-aikon-azul text-2xl">289€ + IVA</span></p>
-                        <p class="text-sm font-semibold">Fecha de pago: <span class="text-gray-700">1 al 5 de cada mes (a partir de Octubre para el mes de Septiembre)</span></p>
-                    </div>
-                </div>
-
+                <a href="https://wa.me/34692458085?text=Hola%20Hobnil%2C%20necesito%20un%20servicio%20personalizado%20para%20el%20consulado." 
+                   class="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                    </svg>
+                    WhatsApp
+                </a>
             </div>
-        </section>
-
-        <!-- Servicios Incluidos Section -->
-        <section class="my-16">
-            <h2 class="text-3xl md:text-4xl font-black text-aikon-azul text-center mb-10">¿Qué Incluye Exactamente el Servicio Mensual?</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-aikon-azul mb-4 flex items-center"><i class="fab fa-google text-2xl mr-3"></i>Gestión de Google Ads</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Optimización continua de presupuesto (25€/día).</li>
-                        <li>Supervisión y ajuste de pujas y palabras clave.</li>
-                        <li>Creación y testeo de nuevos anuncios para mejorar el rendimiento.</li>
-                        <li>Informe mensual con resultados clave (llamadas, WhatsApps, coste).</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-aikon-azul mb-4 flex items-center"><i class="fab fa-instagram text-2xl mr-3"></i>Gestión de Instagram</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Creación y publicación de **2 posts de alta calidad por semana**.</li>
-                        <li>Redacción de textos persuasivos y estrategia de hashtags.</li>
-                        <li>Publicación regular de Stories para mantener el perfil activo.</li>
-                        <li>Respuesta a comentarios para fomentar la comunidad.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center mt-8 bg-white p-4 rounded-lg shadow-md">
-                <p class="font-semibold text-gray-800">
-                    <i class="fas fa-info-circle text-aikon-azul mr-2"></i><strong>Importante:</strong> Este plan se centra exclusivamente en los servicios detallados. Cualquier tarea adicional, como la creación de más contenido, gestión de otras redes sociales o desarrollo de nuevas funcionalidades web, se presupuestará de forma independiente.
-                </p>
-            </div>
-        </section>
-
-        <!-- Próximos Pasos Section -->
-        <section class="my-16">
-            <h2 class="text-3xl md:text-4xl font-black text-aikon-azul text-center mb-10">Próximos Pasos para Empezar</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="bg-aikon-amarillo text-aikon-negro-texto w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-                    <h3 class="text-xl font-bold text-aikon-azul mb-2">Confirmación</h3>
-                    <p class="text-sm text-gray-700">Aceptación de la propuesta y abono del pago del setup inicial.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="bg-aikon-amarillo text-aikon-negro-texto w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-                    <h3 class="text-xl font-bold text-aikon-azul mb-2">Accesos y Material</h3>
-                    <p class="text-sm text-gray-700">Proporcionar los accesos necesarios (Google, Instagram) y material gráfico (fotos/vídeos) para las publicaciones.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="bg-aikon-amarillo text-aikon-negro-texto w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-                    <h3 class="text-xl font-bold text-aikon-azul mb-2">Validación</h3>
-                    <p class="text-sm text-gray-700">Revisión y validación de los primeros anuncios y publicaciones antes del lanzamiento oficial.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contacto Section -->
-        <section class="bg-aikon-azul text-white text-center py-12 rounded-xl shadow-lg">
-            <h2 class="text-3xl font-bold mb-4">¿Listos para empezar a atraer nuevos clientes?</h2>
-            <p class="mb-6">Si tienes cualquier duda o quieres dar el siguiente paso, no dudes en contactarme.</p>
-            <div class="space-y-4 md:space-y-0 md:space-x-6">
-                <a href="mailto:hola@hobnilsanchez.com" class="btn-cta inline-block"><i class="fas fa-envelope mr-2"></i>hola@hobnilsanchez.com</a>
-                <a href="tel:+34692458085" class="btn-cta inline-block"><i class="fas fa-phone-alt mr-2"></i>+34 692 458 085</a>
-            </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="text-center py-6">
-        <p class="text-sm text-gray-600">Propuesta preparada por Hobnil Sánchez para Aikon Neumáticos.</p>
+    <footer class="bg-aikon-dark text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2024 Hobnil Sánchez - Servicios Digitales Profesionales</p>
+        </div>
     </footer>
 
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
+
